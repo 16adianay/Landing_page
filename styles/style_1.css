@@ -161,13 +161,13 @@ body * {
     background-color: black;
     height: 1074px;
     margin: 0;
+    padding-left: 130px;
 }
 .projects-container {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
     padding-right: 130px;
-    padding-left: 130px;
 }
 .projects__navigation {
     font-family: 'YesevaOne','Times New Roman', Times, serif;
@@ -614,7 +614,7 @@ hr {
 }
 .styles-container {
     height: 864px;
-    margin-left: 100px;
+    padding-left: 100px;
     display: flex;
     margin-top: 100px;
 }

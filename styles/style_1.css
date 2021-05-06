@@ -124,10 +124,6 @@ body * {
 .hero-content {
     position: relative;
     z-index: 1;
-    margin: 0 auto;
-}
-.text-content {
-    margin: 0 auto;
 }
 .subtitle {
     color: white;

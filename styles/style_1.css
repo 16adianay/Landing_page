@@ -175,7 +175,8 @@ body * {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
 }
 .projects__item {
     padding-right: 60px;
@@ -185,10 +186,6 @@ body * {
     color: #E3B873;
 }
 
-.projects__navigation a.ref:nth-child(-n+2){
-    color: rgba(255, 255, 255, 0.3);
-    text-decoration: none;
-}
 .projects-content {
     display: flex;
     min-height: 570px;

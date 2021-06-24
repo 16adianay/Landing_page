@@ -278,7 +278,9 @@ body * {
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
 }
-.projects__item a:hover {
+
+.projects__item a:hover,
+.projects__item a.active {
     color: #E3B873;
     padding-bottom: 6px;
     border-bottom: 1px solid #E3B873;
@@ -362,7 +364,6 @@ body * {
 .projects-facts {
     padding-top: 0px;
     display: flex;
-    justify-content: space-between;
 }
 @media screen and (max-width:1300px) {
     .projects-facts {
@@ -388,7 +389,7 @@ body * {
     }
 } 
 .projects-facts-last {
-    padding-right: 100px;
+    padding-left: 100px;
 }
 
 @media screen and (max-width:1300px) {
@@ -404,6 +405,8 @@ body * {
     margin-top: 90px;
     display: flex;
     z-index: 30;
+    margin-top: 400px;
+    margin-left: 820px;
 }
 @media screen and (max-width:1300px) {
     .projects__leaf {
@@ -416,16 +419,74 @@ body * {
 .projects__leaf__img:last-child {
     margin-left: 12px;
 }
-
-.point {
+@media screen and (max-width:1300px) {
+    .slider {
+        display: none;
+    }
+}
+.slider {
+    position: relative;
+}
+.slider__images {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin-left: 640px;
+    margin-top: -350px;
+}
+.slider__images .image {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+.slider__images .image.active {
+    opacity: 1;
+}
+.slider__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+.slider__arrow:hover {
+    opacity: 1;
+}
+.slider__arrow.left {
+    left: 0;
+}
+.slider__arrow.right {
+    right: 0;
+}
+.slider__dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 320px;
+}
+.slider__dots-item {
     height: 9.57px;
     width: 9.57px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4 ease;
     margin-right: 17.5px;
 }
-.point:first-of-type {
-    background: white;
+.slider__dots-item:hover,
+.slider__dots-item.active {
+    background-color: white;
 }
 .online {
     margin-top: -320px;

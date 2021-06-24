@@ -253,16 +253,38 @@ body * {
         padding-right: 0;
     }
 }
+.projects-container__menu {
+	display: flex;
+	justify-content: flex-end;
+	align-content: space-between;
+}
 .projects__navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.projects__navigation-item {
     font-family: 'YesevaOne','Times New Roman', Times, serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
     text-transform: uppercase;
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 19px;
+    margin-right: 74px;
+    color: rgba(255, 255, 255, 0.3);
+}
+.projects__navigation-link {
+    color: rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+}
+.projects__navigation-link:hover,
+.projects__navigation-link.active {
+    color: #e3b873;
+	padding-bottom: 7px;
+	border-bottom: 1px #E3B873 solid;
+	cursor: pointer;
 }
 @media screen and (max-width:1300px) {
     .projects__navigation {
@@ -271,23 +293,13 @@ body * {
 }
 
 .projects__item {
-    padding-right: 60px;
-}
-
-.projects__item a {
-    color: rgba(255, 255, 255, 0.3);
-    text-decoration: none;
-}
-
-.projects__item a:hover,
-.projects__item a.active {
-    color: #E3B873;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #E3B873;
+    width: 50%;
+    margin-bottom: 34px;
 }
 
 .projects-content {
     display: flex;
+    justify-content: space-between;
     min-height: 570px;
     padding-top: 10px;
 }
@@ -316,9 +328,7 @@ body * {
         text-align: center;
     }
 }
-.projects-text {
-    padding-right: 50px;
-}
+
 @media screen and (max-width:1300px) {
     .projects-text {
         padding: 0;
@@ -362,26 +372,42 @@ body * {
 
 }
 .projects-facts {
-    padding-top: 0px;
+    margin-top: 30px;
+    padding: 0;
     display: flex;
+    width: 460px;
+    flex-wrap: wrap;
 }
+
 @media screen and (max-width:1300px) {
     .projects-facts {
+        margin: 0;
         justify-content: start;
         padding-top: 30px;
     }
 }
-.projects__title_1 {
+.subtitle__projects {
+    font-family: 'YesevaOne','Times New Roman', Times, serif;
+    font-weight: normal;
     font-size: 18px;
     line-height: 25px;
+    color: #E3B873;
+    text-transform: uppercase;
+
+}
+.projects__item__text {
+    font-family: 'NunitoSans', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+	line-height: 1.6;
+	color: #ffffff;
 }
 @media screen and (max-width:1300px) {
-    .projects__title_1 {
+    .subtitle__projects {
         text-align: start;
         font-size: 14px;
         line-height: 138.6%;
     }
-    .projects__title_2 {
+    ..projects__item__text {
         margin-top: 1.5px;
     }
     .mobile_description {
@@ -401,22 +427,16 @@ body * {
 .apartment {
     padding-bottom: 26px;
 }
-.projects__leaf {
-    margin-top: 90px;
-    display: flex;
-    z-index: 30;
-    margin-top: 400px;
-    margin-left: 820px;
-}
+
 @media screen and (max-width:1300px) {
     .projects__leaf {
         display: none;
     }
 }
-.projects__leaf__img:first-of-type {
+.slider__arrow:first-of-type {
     margin-right: 29.5px;
 }
-.projects__leaf__img:last-child {
+.slider__arrow:last-child {
     margin-left: 12px;
 }
 @media screen and (max-width:1300px) {
@@ -429,16 +449,15 @@ body * {
 }
 .slider__images {
     position: relative;
-    width: 500px;
-    height: 350px;
-    margin-left: 640px;
-    margin-top: -350px;
+	width: 679px;
+	height: 482px;
+    margin: 45px 45px 0 0;
 }
 .slider__images .image {
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 100%;
+	height: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -449,13 +468,13 @@ body * {
     opacity: 1;
 }
 .slider__arrows {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+.slider__arrow {
     cursor: pointer;
+    background-size: cover;
 }
 .slider__arrow:hover {
     opacity: 1;
@@ -468,12 +487,6 @@ body * {
 }
 .slider__dots {
     display: flex;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    margin-top: 20px;
-    margin-left: 320px;
 }
 .slider__dots-item {
     height: 9.57px;

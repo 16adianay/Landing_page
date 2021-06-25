@@ -4,7 +4,7 @@ let images = [{
   city: "Rostov-on-Don<br />LCD admiral",
   area: "81 m<sup>2</sup>",
   time: "3.5 months",
-},{
+}, {
   url: './images/asset/styles_3.png',
   link: "Sochi Thieves",
   city: "Sochi<br />Thieves",
@@ -29,8 +29,6 @@ function initSlider() {
   let mobileArrows = document.querySelector('.mobile__photo');
   let mobileImages = document.querySelector('.mobile__images');
 
-
-  
   initImages();
   initArrows();
   initDots();

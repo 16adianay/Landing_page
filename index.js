@@ -13,7 +13,7 @@ let images = [{
 }, {
   url: './images/asset/styles_4.png',
   link: "Rostov-on-Don Patriotic",
-  city: "Rostov-on-Don<br />Patriotic",
+  city: "Rostov-on-Don<br>Patriotic",
   area: "93 m<sup>2</sup>",
   time: "3 months",
 }];

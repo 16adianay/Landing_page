@@ -1,7 +1,7 @@
 let images = [{
   url: './images/asset/image_1.jpg',
   link: 'Rostov-on-Don, Admiral',
-  city: "Rostov-on-Don<br />LCD admiral",
+  city: "Rostov-on-Don<br>LCD admiral",
   area: "81 m<sup>2</sup>",
   time: "3.5 months",
 }, {
@@ -11,7 +11,7 @@ let images = [{
   area: "105 m<sup>2</sup>",
   time: "4 months",
 }, {
-  url: './images//asset/styles_4.png',
+  url: './images/asset/styles_4.png',
   link: "Rostov-on-Don Patriotic",
   city: "Rostov-on-Don<br />Patriotic",
   area: "93 m<sup>2</sup>",

@@ -25,6 +25,11 @@ function initSlider() {
   let sliderArrows = document.querySelector(".slider__arrows");
   let sliderDots = document.querySelector(".slider__dots");
   let sliderLinks = document.querySelector('.projects__navigation')
+
+  let mobileArrows = document.querySelector('.mobile__photo');
+  let mobileImages = document.querySelector('.mobile__images');
+
+
   
   initImages();
   initArrows();
@@ -36,7 +41,9 @@ function initSlider() {
   function initImages() {
     images.forEach((image, index) => {
       let imageDiv = `<div class="image n${index} ${index === 0? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
+      let mobileImageDiv = `<div class="image n${index} ${index === 0? "active" : ""}" style="background-image:url(${images[index].url});" data-index="${index}"></div>`;
       sliderImages.innerHTML += imageDiv;
+      mobileImages.innerHTML += mobileImageDiv;
     });
   }
   
@@ -46,6 +53,19 @@ function initSlider() {
         let curNumber = +sliderImages.querySelector(".active").dataset.index;
         let nextNumber;
         if (arrow.classList.contains("left")) {
+          nextNumber = curNumber === 0? images.length - 1 : curNumber - 1;
+        } else {
+          nextNumber = curNumber === images.length - 1? 0 : curNumber + 1;
+        }
+        moveSlider(nextNumber);
+      });
+    });
+
+    mobileArrows.querySelectorAll('.mobile__arrow').forEach(arrow => {
+      arrow.addEventListener("click", function() {
+        let curNumber = +sliderImages.querySelector(".active").dataset.index;
+        let nextNumber;
+        if (arrow.classList.contains("mobile_img_1")) {
           nextNumber = curNumber === 0? images.length - 1 : curNumber - 1;
         } else {
           nextNumber = curNumber === images.length - 1? 0 : curNumber + 1;
@@ -107,6 +127,9 @@ function initSlider() {
   function moveSlider(num) {
       sliderImages.querySelector(".active").classList.remove("active");
       sliderImages.querySelector(".n" + num).classList.add("active");
+
+      mobileImages.querySelector(".active").classList.remove("active");
+      mobileImages.querySelector(".n" + num).classList.add("active");
 
       sliderDots.querySelector(".active").classList.remove("active");
       sliderDots.querySelector(".n" + num).classList.add("active");

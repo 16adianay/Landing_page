@@ -782,7 +782,9 @@ hr {
 }
 .data-second-form input[type="checkbox"]:checked + label::before {
 	content: url('../images/Vector.svg');
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width:18px;
 	height:18px;
     background-color:#E3B873;
@@ -1055,7 +1057,9 @@ hr {
 }
 .repair-second-form input[type="checkbox"]:checked + label::before {
 	content: url('../images/Vector.svg');
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width:18px;
 	height:18px;
     background-color: #E3B873;

@@ -1339,6 +1339,7 @@ hr {
     align-items: center;
     flex-direction: column;
 }
+
 .questions {
     width: 883px;
     height: 445px;
@@ -1353,6 +1354,10 @@ hr {
         width: 375px;
         height: auto;
         margin-top: 0;
+    }
+    .full_map {
+        width: 340px;
+        height: 230px;
     }
 }
 .questions-container {

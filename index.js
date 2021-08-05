@@ -1,3 +1,4 @@
+
 let images = [{
   url: './images/asset/image_1.jpg',
   link: 'Rostov-on-Don, Admiral',

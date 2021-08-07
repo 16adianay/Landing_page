@@ -6,13 +6,13 @@ let images = [{
   area: "81 m<sup>2</sup>",
   time: "3.5 months",
 }, {
-  url: './images/asset/styles_3.png',
+  url: './images/asset/image_2.jpg',
   link: "Sochi Thieves",
   city: "Sochi<br />Thieves",
   area: "105 m<sup>2</sup>",
   time: "4 months",
 }, {
-  url: './images/asset/styles_4.png',
+  url: './images/asset/image_3.jpg',
   link: "Rostov-on-Don Patriotic",
   city: "Rostov-on-Don<br>Patriotic",
   area: "93 m<sup>2</sup>",
@@ -50,6 +50,7 @@ function initSlider() {
     sliderArrows.querySelectorAll(".slider__arrow").forEach(arrow => {
       arrow.addEventListener("click", function() {
         let curNumber = +sliderImages.querySelector(".active").dataset.index;
+        console.log(curNumber);
         let nextNumber;
         if (arrow.classList.contains("left")) {
           nextNumber = curNumber === 0? images.length - 1 : curNumber - 1;
